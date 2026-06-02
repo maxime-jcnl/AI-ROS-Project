@@ -1,0 +1,41 @@
+# =============================================================================
+#  pyproject.toml
+#  -------------------------------------------------------------------------
+#  Décrit la partie PYTHON / MACHINE LEARNING du projet (dossier src/).
+#  Gérée par UV (https://docs.astral.sh/uv/), un gestionnaire de paquets et
+#  d'environnements virtuels très rapide.
+#
+#  >>> Tu n'as PAS besoin d'installer Python ni de créer un venv à la main :
+#      UV s'occupe de tout. <<<
+#
+#  Commandes utiles (depuis le dossier du projet) :
+#     uv sync                                  -> crée le venv + installe tout
+#     uv run python src/01_exploration.py      -> lance une étape
+#     uv run python src/02_preprocessing_features.py
+#     uv run python src/03_train_model.py
+#
+#  NB : la partie ROS2 (dossier ros2_emg_gripper/) NE passe PAS par UV : elle
+#  se compile avec `colcon build`, l'outil standard de ROS2. C'est normal et
+#  voulu (ROS2 impose son propre système de build).
+# =============================================================================
+
+[project]
+name = "emg-ros2-gripper"
+version = "1.0.0"
+description = "Controle myoelectrique d'une pince robotique : EMG -> ML -> ROS2."
+readme = "README.md"
+requires-python = ">=3.10"
+
+# Dependances de la partie machine learning :
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "joblib>=1.3",
+    "matplotlib>=3.7",
+]
+
+# On dit a UV de NE PAS essayer d'installer ce projet comme un paquet :
+# on veut juste qu'il gere l'environnement et lance nos scripts.
+[tool.uv]
+package = false
