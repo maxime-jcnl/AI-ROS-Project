@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+  simple_gripper.urdf
+  ===================
+  Description d'une pince robotique TRÈS simple, juste pour la visualiser
+  dans RViz. Elle a 3 articulations qui bougent :
+    - wrist_roll   : rotation du poignet  (action TOURNER)
+    - finger_left  : doigt gauche qui s'écarte/se ferme
+    - finger_right : doigt droit qui s'écarte/se ferme
+  (OUVRIR/FERMER = les deux doigts s'écartent/se rapprochent.)
+
+  Pas besoin de comprendre chaque ligne : c'est juste la "forme" du robot.
+-->
+<robot name="simple_gripper">
+
+  <!-- Socle fixe -->
+  <link name="base_link">
+    <visual>
+      <geometry><cylinder radius="0.03" length="0.04"/></geometry>
+      <material name="gris"><color rgba="0.4 0.4 0.4 1"/></material>
+    </visual>
+  </link>
+
+  <!-- Poignet (paume) qui peut tourner -->
+  <link name="palm">
+    <visual>
+      <geometry><box size="0.08 0.06 0.02"/></geometry>
+      <material name="bleu"><color rgba="0.2 0.4 0.8 1"/></material>
+    </visual>
+  </link>
+  <joint name="wrist_roll" type="revolute">
+    <parent link="base_link"/>
+    <child link="palm"/>
+    <origin xyz="0 0 0.04"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="10" velocity="3"/>
+  </joint>
+
+  <!-- Doigt gauche (coulisse sur le côté) -->
+  <link name="finger_left_link">
+    <visual>
+      <geometry><box size="0.015 0.01 0.06"/></geometry>
+      <material name="vert"><color rgba="0.2 0.7 0.3 1"/></material>
+    </visual>
+  </link>
+  <joint name="finger_left" type="prismatic">
+    <parent link="palm"/>
+    <child link="finger_left_link"/>
+    <origin xyz="0.025 0 0.04"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="0.0" upper="0.04" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- Doigt droit (coulisse dans l'autre sens) -->
+  <link name="finger_right_link">
+    <visual>
+      <geometry><box size="0.015 0.01 0.06"/></geometry>
+      <material name="vert"><color rgba="0.2 0.7 0.3 1"/></material>
+    </visual>
+  </link>
+  <joint name="finger_right" type="prismatic">
+    <parent link="palm"/>
+    <child link="finger_right_link"/>
+    <origin xyz="-0.025 0 0.04"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="0.0" upper="0.04" effort="10" velocity="1"/>
+  </joint>
+
+</robot>
