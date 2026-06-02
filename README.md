@@ -6,7 +6,9 @@ de classification reconnaît le geste de la main associé, et une pince robotiqu
 simulée sous ROS2 exécute l'action correspondante (ouverture, fermeture,
 rotation). Le principe est celui d'une prothèse de main commandée par l'activité
 musculaire.
+
 [![Voir la vidéo](https://img.youtube.com/vi/ZsZidsTis38/maxresdefault.jpg)](https://www.youtube.com/watch?v=ZsZidsTis38)
+
 Le projet est réalisé dans le cadre de l'évaluation **AI & ROS** et couvre deux
 volets : le traitement de signal biomédical et l'apprentissage automatique d'une
 part, l'intégration robotique sous ROS2 d'autre part.
