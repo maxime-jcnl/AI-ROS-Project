@@ -131,10 +131,10 @@ docker run -it --rm osrf/ros:humble-desktop bash
 
 | Critère | Localisation |
 |---|---|
-| 1. Choix et qualité des données | `RAPPORT.md` §1 et `01_exploration.py` (synchronisation, contrôle qualité) |
+| 1. Choix et qualité des données | `RAPPORT.md` et `01_exploration.py` (synchronisation, contrôle qualité) |
 | 2. Prétraitement et caractéristiques | `utils.py` (filtres 20–450 Hz, notch 50 Hz, 5 caractéristiques par canal) et gestion du déséquilibre des classes |
 | 3. Modèle et validation | `03_train_model.py` (LDA et Random Forest, validation intra-sujet et inter-sujet) |
 | 4. Intégration robotique ROS2 | `ros2_emg_gripper/` (trois nœuds, boucle fermée, mesure de latence) |
-| 5. Reproductibilité et discussion | dépôt complet (code documenté, README) et `RAPPORT.md` §5 (limites, éthique, perspectives) |
+| 5. Reproductibilité et discussion | dépôt complet (code documenté, README) et `RAPPORT.md` (limites, éthique, perspectives) |
 
 Le détail méthodologique et les résultats figurent dans `RAPPORT.md`.
