@@ -7,9 +7,7 @@ simulée sous ROS2 exécute l'action correspondante (ouverture, fermeture,
 rotation). Le principe est celui d'une prothèse de main commandée par l'activité
 musculaire.
 
-<a href="https://www.youtube.com/watch?v=ZsZidsTis38" target="_blank">
-  <img src="https://img.youtube.com/vi/ZsZidsTis38/hqdefault.jpg" alt="Voir la vidéo" width="400" />
-</a>
+[![Voir la vidéo](https://img.youtube.com/vi/ZsZidsTis38/0.jpg)](https://www.youtube.com/watch?v=ZsZidsTis38)
 
 Le projet est réalisé dans le cadre de l'évaluation **AI & ROS** et couvre deux
 volets : le traitement de signal biomédical et l'apprentissage automatique d'une
