@@ -31,8 +31,6 @@ EMG (12 capteurs) → filtrage → extraction de caractéristiques → classific
 projet_emg_ros2/
 ├── README.md
 ├── RAPPORT.md                          Rapport répondant aux cinq critères d'évaluation
-├── STORYBOARD_VIDEO.md                 Plan de la démonstration vidéo
-├── SCRIPT_VIDEO.md                     Script minuté de la présentation
 ├── pyproject.toml                      Dépendances Python (gérées par UV)
 ├── uv.lock                             Versions figées pour la reproductibilité
 ├── data/
