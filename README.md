@@ -10,6 +10,7 @@ musculaire.
 <a href="https://www.youtube.com/watch?v=ZsZidsTis38" target="_blank">
   <img src="https://img.youtube.com/vi/ZsZidsTis38/hqdefault.jpg" alt="Voir la vidéo" width="400" />
 </a>
+
 Le projet est réalisé dans le cadre de l'évaluation **AI & ROS** et couvre deux
 volets : le traitement de signal biomédical et l'apprentissage automatique d'une
 part, l'intégration robotique sous ROS2 d'autre part.
